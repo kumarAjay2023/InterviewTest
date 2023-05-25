@@ -15,6 +15,13 @@ export interface User {
     birthDate: string;
 }
 
+export interface UserDetails {
+    limit: number;
+    skip: number;
+    total: number;
+    users: User[];
+}
+
 export interface UsersState extends EntityState<User> {
     selectedUserId: string | null;
 }
