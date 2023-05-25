@@ -78,6 +78,21 @@ export class UsersComponent implements OnInit {
                     birthDate: item.birthDate
                 }))
             });*/
+
+            this.users.forEach((item) => {
+                this.userForm.patchValue({
+
+                    id: item.id,
+                    firstName: item.firstName,
+                    lastName: item.lastName,
+                    maidenName: item.maidenName,
+                    age: item.age,
+                    gender: item.gender,
+                    email: item.email,
+                    phone: item.phone,
+                    birthDate: item.birthDate
+                })
+            });
         });
     }
 
